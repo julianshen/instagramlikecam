@@ -1,0 +1,11 @@
+body {
+    background: #999;
+}
+
+.icamera video {
+    display:none;
+}
+
+.iresult {
+    display:none;
+}
