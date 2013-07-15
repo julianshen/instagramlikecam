@@ -107,7 +107,7 @@
       //test for getUserMedia
       if(navigator.getUserMedia) {
           //setup callbacks
-          navigator.getUserMedia('video', successCallback, errorCallback);
+          navigator.getUserMedia({video:true}, successCallback, errorCallback);
 
           //if everything if good then set the source of the video element to the mediastream
           function successCallback( stream ) {
