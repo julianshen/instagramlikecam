@@ -68,6 +68,8 @@
   var progress = document.getElementById('progress');
   var presetbtns = document.querySelectorAll('.btn-info');
   
+  window.URL = window.URL || window.webkitURL;
+  
   for (var i = 0; i < presetbtns.length; i++){
       presetbtns[i].onclick = function() {
           var filter = this.id;
@@ -111,8 +113,7 @@
 
           //if everything if good then set the source of the video element to the mediastream
           function successCallback( stream ) {
-          	alert('test');
-              video.src = stream;
+          	video.src = window.URL.createObjectURL(stream);
           }
 
           //If everything isn't ok then say so
